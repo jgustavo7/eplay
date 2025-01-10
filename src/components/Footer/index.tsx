@@ -1,53 +1,29 @@
-import { Container, FooterSection, Link, Links, SectionTitle } from './styles'
+import Logo from '../Logo'
+import { SocialLinks } from '../../utils/list'
 
-const currentYear = new Date().getFullYear()
+import { FooterContainer, SocialIcons, Text } from './styles'
 
 const Footer = () => (
-  <Container>
-    <div className="container">
-      <FooterSection>
-        <SectionTitle>Categorias</SectionTitle>
-        <Links>
-          <li>
-            <Link>RPG</Link>
-          </li>
-          <li>
-            <Link>Ação</Link>
-          </li>
-          <li>
-            <Link>Aventura</Link>
-          </li>
-          <li>
-            <Link>Esportes</Link>
-          </li>
-          <li>
-            <Link>Simulação</Link>
-          </li>
-          <li>
-            <Link>Estrategia</Link>
-          </li>
-          <li>
-            <Link>FPS</Link>
-          </li>
-        </Links>
-      </FooterSection>
-      <FooterSection>
-        <SectionTitle>Acesso Rapido</SectionTitle>
-        <Links>
-          <li>
-            <Link>Novidades</Link>
-          </li>
-          <li>
-            <Link>Promoções</Link>
-          </li>
-          <li>
-            <Link>Em Breve</Link>
-          </li>
-        </Links>
-      </FooterSection>
-      <p>{currentYear} - &copy; E-Play Todos os direitos reservados</p>
-    </div>
-  </Container>
+  <FooterContainer>
+    <Logo
+      kind="link"
+      cover="https://raw.githubusercontent.com/BrunoOliveira16/Curso-Engenheiro-Front-End-EBAC/main/Modulo-35/ImagesEfood/logo.png"
+      title="Logo eFood"
+      to="/"
+    />
+
+    <SocialIcons>
+      {SocialLinks.map((item) => (
+        <img src={item.icon} alt={item.title} key={item.id} />
+      ))}
+    </SocialIcons>
+
+    <Text>
+      A efood é uma plataforma para divulgação de estabelecimentos, a
+      responsabilidade pela entrega, qualidade dos produtos é toda do
+      estabelecimento contratado.
+    </Text>
+  </FooterContainer>
 )
 
 export default Footer
