@@ -1,7 +1,6 @@
 import Button from '../Button'
 import { formatPrice } from '../../utils'
 
-import { MdClose } from 'react-icons/md'
 import {
   ModalContainer,
   ContainerImage,
@@ -64,7 +63,7 @@ const Modal = ({
           />
         </ContainerText>
 
-        <MdClose onClick={closeModal} />
+        
       </ModalContent>
     </ModalContainer>
   )
