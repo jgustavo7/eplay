@@ -62,8 +62,6 @@ const Modal = ({
             onClick={handleAddItem}
           />
         </ContainerText>
-
-        
       </ModalContent>
     </ModalContainer>
   )
